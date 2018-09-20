@@ -17,11 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import RedirectView
+
+from attack import views
 
 urlpatterns = [
-    # path('', attack.views.manage, name='index'),
     path('attack/', include('attack.urls', namespace='attack')),
     path('armory/', include('armory.urls', namespace='armory')),
     path('info/', include('info.urls', namespace='info')),
     path('config/', include('config.urls', namespace='config')),
+    path('', RedirectView.as_view(url='attack/'), name='index'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
