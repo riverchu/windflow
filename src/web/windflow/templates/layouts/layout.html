@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<title>北京邮电大学模拟攻击平台</title>
+
+        <link rel="stylesheet" href="{% static "css/lib/bootstrap.min.css" %}" />
+        <link rel="stylesheet" href="{% static "css/layout.css" %}" />
+        <link rel="stylesheet" href="{% static "css/default.css" %}" />
+	</head>
+	
+	<body class="bg">
+		<header class="header pin-top-header">
+			<h3>北邮模拟攻击平台</h3>
+		</header>
+		<div class="pin-top-nav">
+		    <nav class="navbar" role="navigation">
+		      <ul class="nav navbar-nav">
+		        <li class="nav-item">
+		          <a href="#" class="nav-link">模拟攻击</a>
+		        </li>
+		        <li class="nav-item">
+		          <a href="#" class="nav-link">插件库</a>
+		        </li>
+		        <li class="nav-item">
+		          <a href="#" class="nav-link">统计</a>
+		        </li>
+		        <li class="nav-item">
+		          <a href="#" class="nav-link">配置</a>
+		        </li>
+		      </ul>
+		    </nav>
+		</div>
+		
+		<div class="wrapper">
+			<div class="container-fluid scroll-div">
+                {% block content %}
+                {% endblock %}
+			</div>
+		</div>
+
+	</body>
+
+    <script type="text/javascript" src="{% static "js/lib/jquery-3.3.1.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/lib/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/lib/echarts.min.js" %}"></script>
+</html>

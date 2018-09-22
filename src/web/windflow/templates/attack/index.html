@@ -1,0 +1,72 @@
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-6">
+  	<div class="xpanel">
+      <div class="content" id="scan">
+      	<div class="xpanel-head">
+        	<p>扫描<input type="checkbox" id="checkbox-moudle-scan" checked /><label for="checkbox-moudle-scan"></label></p>
+    	</div>
+    	<div class="xpanel-body scroll-div">
+    		插件:<input type="text" name="usrname" class="xpanel-input" ><br />
+    		种类:<input type="text" name="usrname" class="xpanel-input" ><br />
+    		强度:<input type="text" name="usrname" class="xpanel-input" ><br />
+    		其他参数:<input type="text" name="usrname" class="xpanel-input" ><br />
+    		测试:<input type="text" name="usrname" class="xpanel-input" ><br />
+    	</div>
+        <div class="xpanel-tail">
+        	<input type="button" class="bt panel-bt" name="scan_button" value="提交配置" />
+    	</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+  	<div class="xpanel">
+      <div class="content" id="vuln">
+      	<div class="xpanel-head">
+        	<p>漏洞利用<input type="checkbox" id="checkbox-moudle-vuln" checked /><label for="checkbox-moudle-vuln"></label></p>
+        </div>
+        <div class="xpanel-body">
+    	</div>
+        <div class="xpanel-tail">
+        	<input type="button" class="bt panel-bt" name="vuln_button" value="提交配置" />
+        </div>
+      </div>
+  	</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+  	<div class="xpanel">
+      <div class="content" id="trojan">
+      	<div class="xpanel-head">
+        	<p>木马生成<input type="checkbox" id="checkbox-moudle-dos" checked /><label for="checkbox-moudle-dos"></label></p>
+        </div>
+        <div class="xpanel-body">
+    	</div>
+        <div class="xpanel-tail">
+        	<input type="button" class="bt panel-bt" name="trojan_button" value="提交配置" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+  	<div class="xpanel">
+      <div class="content" id="dos">
+      	<div class="xpanel-head">
+        	<p>DOS攻击<input type="checkbox" id="checkbox-moudle-trojan" checked /><label for="checkbox-moudle-trojan"></label></p>
+    	</div>
+    	<div class="xpanel-body">
+    	</div>
+        <div class="xpanel-tail">
+            <input type="button" class="bt panel-bt" name="dos_button" value="提交配置" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-tail">
+	<input type="button" class="bt container-bt" name="start_button" value="开始攻击" />
+</div>
+{% endblock %}
