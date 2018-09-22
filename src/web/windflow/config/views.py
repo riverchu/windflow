@@ -4,4 +4,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 def config(request):
-    return HttpResponse('ok')
+    content = {}
+    content['user'] = 'Tom'
+    return render(request, 'config/index.html', content)

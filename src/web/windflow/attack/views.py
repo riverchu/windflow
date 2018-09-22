@@ -4,5 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def manage(request):
-    print('attack.manage')
-    return HttpResponse('ok')
+    content = {}
+    content['user'] = 'Tom'
+    return render(request, 'attack/index.html', content)
+
